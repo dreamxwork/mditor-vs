@@ -43,8 +43,8 @@
 }
 
 .vditor,
-.vditor-content,
-.vditor-content *:not(.hljs, .hljs *, .katex, .katex *, a, hr, .vditor-reset--error, code) {
+.vditor-content
+{
     background-color: var(--bg-color) !important;
     color: var(--front-color) !important;
 }
@@ -52,7 +52,8 @@
 .vditor-content .language-flowchart svg,
 .vditor-content .language-mermaid svg,
 .vditor-content .language-mindmap canvas {
-    background-color: white !important;
+    background-color: var(--mermaid-bg-color,#f7f7f0) !important;
+    /* background-color: #cdd17d !important; */
 }
 
 

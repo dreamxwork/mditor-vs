@@ -3,7 +3,8 @@
     "displayName": "Mditor",
     "description": "WYSIWYG Markdown Editor, View word,excel files.",
     "version": "1.0.0",
-    "publisher": "lijin",
+    "license": "LGPL-3.0-or-later",
+    "publisher": "dreamxwork",
     "icon": "images/logo.png",
     "engines": {
         "vscode": "^1.64.0"
@@ -20,13 +21,13 @@
         "Other"
     ],
     "bugs": {
-        "url": "https://github.com/dreamxwork/mditor/issues",
-        "email": "lijin@163.com"
+        "url": "https://github.com/dreamxwork/mditor-vs/issues",
+        "email": "dreamxwork@outlook.com"
     },
-    "homepage": "https://github.com/dreamxwork/mditor/blob/main/README.md",
+    "homepage": "https://github.com/dreamxwork/mditor-vs/blob/main/README.md",
     "repository": {
         "type": "git",
-        "url": "https://github.com/dreamxwork/mditor.git"
+        "url": "https://github.com/dreamxwork/mditor-vs.git"
     },
     "activationEvents": [
         "onStartupFinished"
