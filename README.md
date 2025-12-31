@@ -1,32 +1,95 @@
 # Mditor
 
-## Introduction
+[English](README.md) | [简体中文](README-CN.md) | [繁體中文](README-TW.md) | [日本語](README-JA.md)
 
-English | [简体中文](README-CN.md) | [繁體中文](README-TW.md)
+A powerful and elegant VS Code extension that transforms your Markdown editing experience with WYSIWYG capabilities and comprehensive file preview support.
 
-Mditor is a powerful Visual Studio Code extension that provides comprehensive file preview capabilities and WYSIWYG markdown editing. This extension supports previewing various common office file formats in VS Code.
+## ✨ Highlights
 
-## Supported File Formats
+Mditor brings professional-grade editing and preview capabilities to Visual Studio Code, featuring:
 
-This extension supports previewing these common rich file formats in VS Code:
+- 🎨 **Beautiful WYSIWYG Markdown Editor** - Real-time preview with rich formatting
+- 📊 **Multi-format File Viewer** - Preview Office documents, PDFs, and more
+- 🌓 **Multiple Theme Support** - Gorgeous light and dark themes for comfortable editing
+- ⚡ **Lightning Fast** - Optimized performance for large documents
+- 🎯 **Developer Friendly** - Rich keyboard shortcuts and intuitive interface
 
-- **Excel**: .xls, .xlsx, .csv
-- **Word**: .docx
-- **SVG**: .svg
-- **PDF**: .pdf
-- **Fonts**: .ttf, .otf, .woff, .woff2
-- **Markdown**: .md, .markdown
-- **HTTP Requests**: .http, .rest
-- **Windows Registry**: .reg
-- **Compressed Files**: .zip, .jar, .vsix, .rar
+## 📸 Screenshots
 
-## Features
+### Light Theme
+![Light Theme](images/light.png)
 
-### Markdown Editor
+### Dark Theme
+![Dark Theme](images/dark.png)
 
-This extension integrates [Vditor](https://github.com/Vanessa219/vditor) to provide WYSIWYG markdown editing.
+## 🚀 Features
 
-If you want to use the original VS Code markdown editor, add this to your `settings.json`:
+### Markdown Editor Excellence
+
+Powered by [Vditor](https://github.com/Vanessa219/vditor), our WYSIWYG editor provides:
+
+- **Real-time Preview** - See your formatted content as you type
+- **Rich Formatting** - Support for tables, code blocks, diagrams (Mermaid), math formulas (LaTeX)
+- **Smart Paste** - Automatic image upload and path resolution
+- **Export Anywhere** - Convert to PDF, DOCX, or HTML with one click
+- **Theme Variety** - Multiple beautiful editor themes to match your style
+
+#### Powerful Keyboard Shortcuts
+
+Built on [Vditor shortcuts](shortcut.md) with enhanced productivity features:
+
+- **Move list up**: `Ctrl+Alt+I` / `⌘+^+I`
+- **Move list down**: `Ctrl+Alt+J` / `⌘+^+J`
+- **Edit in VS Code**: `Ctrl+Alt+E` / `⌘+^+E`
+- **Enhanced paste**: `Ctrl+V` / `Cmd+V` with automatic image handling
+
+#### Smart Features
+
+- Zoom editor with `Ctrl/Cmd + Mouse Wheel`
+- Open hyperlinks with `Ctrl/Meta + Click` or double-click
+- Drag & drop image insertion
+- Automatic image path resolution
+- Syntax highlighting with multiple theme options
+
+### Comprehensive File Preview
+
+Preview common file formats directly in VS Code:
+
+- 📊 **Spreadsheets**: .xls, .xlsx, .csv (with edit & save capability)
+- 📝 **Documents**: .docx
+- 🖼️ **Graphics**: .svg
+- 📄 **PDFs**: .pdf (powered by PDF.js)
+- 🔤 **Fonts**: .ttf, .otf, .woff, .woff2
+- 📋 **Markdown**: .md, .markdown
+- 🌐 **HTTP**: .http, .rest (integrated HTTP client)
+- ⚙️ **Registry**: .reg (Windows registry files)
+- 📦 **Archives**: .zip, .jar, .vsix, .rar
+
+### Additional Capabilities
+
+- **Material Icons** - Beautiful file icons from Material Icon Theme
+- **Live HTML Preview** - Press `Ctrl+Shift+V` for instant HTML preview
+- **HTTP Client** - Send API requests directly from .http files
+- **Registry Editor** - Syntax highlighting for Windows registry files
+
+## 🔧 Configuration
+
+Fine-tune Mditor through VS Code settings:
+
+| Setting | Description |
+|---------|-------------|
+| `mditor.enabled` | Enable/disable the extension |
+| `mditor.previewCode` | Enable code syntax highlighting in preview |
+| `mditor.previewCodeStyle` | Default syntax highlighting style |
+| `mditor.previewCodeHighlight.showLineNumber` | Show line numbers in code blocks |
+| `mditor.editorLanguage` | Editor UI language |
+| `mditor.workspacePathAsImageBasePath` | Use workspace path for image base path |
+| `mditor.pasterImgPath` | Image paste path template |
+| `mditor.chromiumPath` | Chromium path for PDF export |
+
+### Switching to Native Markdown Editor
+
+To use VS Code's default markdown editor, add to `settings.json`:
 
 ```json
 {
@@ -37,71 +100,34 @@ If you want to use the original VS Code markdown editor, add this to your `setti
 }
 ```
 
-#### Export Options
+## 📋 Requirements
 
-Right-click in the markdown editor to export files to PDF, DOCX, or HTML formats. PDF export depends on Chromium, which can be configured via `mditor.chromiumPath`.
+- Visual Studio Code `^1.64.0`
+- Internet connection (for some preview features)
 
-![Export Options](image/README-CN/1685418034035.png)
+## 📥 Installation
 
-#### Keyboard Shortcuts
+### From Marketplace
+1. Open VS Code
+2. Go to Extensions (`Ctrl+Shift+X`)
+3. Search for "Mditor"
+4. Click Install
 
-Based on [Vditor shortcuts](shortcut.md) with additional features:
+### From VSIX
+1. Download the latest .vsix file
+2. Open VS Code
+3. Extensions → `...` → Install from VSIX
+4. Select the downloaded file
 
-- **Move list up**: `Ctrl Alt I` / `⌘ ^ I`
-- **Move list down**: `Ctrl Alt J` / `⌘ ^ J`
-- **Edit in VS Code**: `Ctrl Alt E` / `⌘ ^ E`
-- **Paste enhanced content**: `Ctrl V` / `Cmd V` (in markdown files)
+## 🎯 Quick Start
 
-#### Tips
+1. **Markdown Editing**: Open any `.md` file - the WYSIWYG editor launches automatically
+2. **Office Preview**: Click on `.xlsx`, `.docx`, `.pdf` files to preview
+3. **HTML Preview**: Open `.html` files and press `Ctrl+Shift+V`
+4. **HTTP Requests**: Create `.http` files to test APIs
+5. **Archive Viewing**: Open `.zip` or other archives to browse contents
 
-- Resize editor via ctrl/cmd + mouse scroll
-- Hyperlinks can be opened by ctrl/meta + click or double-click
-- Image paste and automatic path resolution
-- Syntax highlighting with multiple themes support
-
-### Additional Features
-
-- **Icon Theme**: Built-in Material Icon Theme icons
-- **Excel Preview**: Support for .xlsx and .csv files with save functionality (note: .xlsx save may lose formatting, .csv doesn't support GBK Chinese encoding)
-- **HTML Live Preview**: Press `Ctrl Shift V` to open live preview while editing HTML
-- **PDF Preview**: Direct PDF file viewing
-- **HTTP Client**: Send HTTP requests (modified integration due to REST Client local request bugs)
-- **Registry Editor**: Support for Windows registry files
-- **Compressed File Viewer**: Extract and view contents of various archive formats
-
-## Configuration
-
-The extension provides various configuration options in VS Code settings:
-
-- `mditor.enabled`: Enable/disable the extension
-- `mditor.previewCode`: Enable code syntax highlighting in preview
-- `mditor.previewCodeStyle`: Default syntax highlight style
-- `mditor.previewCodeHighlight.showLineNumber`: Show line numbers in code blocks
-- `mditor.editorLanguage`: Editor language preference
-- `mditor.workspacePathAsImageBasePath`: Use workspace path as markdown image base path
-- `mditor.pasterImgPath`: Image paste path template
-- `mditor.chromiumPath`: Chromium browser path for PDF export
-
-## Requirements
-
-- Visual Studio Code ^1.64.0
-- Internet connection for some features (PDF rendering, font preview)
-
-## Installation
-
-1. Install from VS Code marketplace: Search for "Mditor"
-2. Or install via VSIX: Download and install the .vsix file
-3. Reload VS Code after installation
-
-## Usage
-
-1. **Markdown**: Open any .md file to start editing with the WYSIWYG editor
-2. **Office Files**: Open .xlsx, .docx, .pdf files to preview them
-3. **HTML**: Open .html files and press `Ctrl Shift V` for live preview
-4. **HTTP Requests**: Create .http files to send API requests
-5. **Registry Files**: Open .reg files with syntax highlighting and navigation
-
-## Development
+## 🛠️ Development
 
 ```bash
 # Install dependencies
@@ -110,43 +136,47 @@ npm install
 # Build the extension
 npm run build
 
-# Run in development mode
+# Development mode with hot reload
 npm run dev
 
 # Package for distribution
 npm run package
 ```
 
-## Sponsor
+## 💖 Support This Project
 
-If you'd like to support the development of this project, you can make a donation via the QR codes below (Alipay / WeChat Pay):
+If you find Mditor helpful, consider supporting its development:
 
 <p>
-  <img src="images/alipay.jpg" alt="Alipay Donation" style="width:200px;display:inline-block;margin-right:16px;" />
-  <img src="images/wechatpay.jpg" alt="WeChat Pay Donation" style="width:200px;display:inline-block;" />
+  <img src="images/alipay.jpg" alt="Alipay Donation" width="200" style="display:inline-block;margin-right:16px;" />
+  <img src="images/wechatpay.jpg" alt="WeChat Pay Donation" width="200" style="display:inline-block;" />
 </p>
 
-## Credits
+Your donations help maintain and improve this project. Thank you for your support!
 
-- **PDF Rendering**: [mozilla/pdf.js/](https://github.com/mozilla/pdf.js/)
+## 🙏 Credits
+
+This project is built on the shoulders of giants:
+
+- **PDF Rendering**: [mozilla/pdf.js](https://github.com/mozilla/pdf.js/)
 - **DOCX Rendering**: [VolodymyrBaydalka/docxjs](https://github.com/VolodymyrBaydalka/docxjs)
-- **XLSX Rendering**:
-  - [SheetJS/sheetjs](https://github.com/SheetJS/sheetjs): XLSX parsing
-  - [myliang/x-spreadsheet](https://github.com/myliang/x-spreadsheet): XLSX rendering
+- **XLSX Processing**:
+  - [SheetJS/sheetjs](https://github.com/SheetJS/sheetjs) - Excel parsing
+  - [myliang/x-spreadsheet](https://github.com/myliang/x-spreadsheet) - Spreadsheet UI
 - **HTTP Client**: [Rest Client](https://github.com/Huachao/vscode-restclient)
-- **Markdown Editor**: [Vanessa219/vditor](https://github.com/Vanessa219/vditor)
-- **Material Icon Theme**: [PKief/vscode-material-icon-theme](https://github.com/PKief/vscode-material-icon-theme)
+- **Markdown Engine**: [Vanessa219/vditor](https://github.com/Vanessa219/vditor)
+- **Icon Theme**: [PKief/vscode-material-icon-theme](https://github.com/PKief/vscode-material-icon-theme)
 
-## License
+## 📜 License
 
 This project is licensed under the [LGPL-3.0-or-later License](LICENSE).
 
-## Issues and Support
+## 📞 Contact & Support
 
-- **Bug Reports**: [GitHub Issues](https://github.com/dreamxwork/mditor-vs/issues)
-- **Email Support**: dreamxwork@outlook.com
-- **Repository**: [GitHub Repository](https://github.com/dreamxwork/mditor-vs.git)
+- **Repository**: [https://github.com/dreamxwork/mditor-vs](https://github.com/dreamxwork/mditor-vs)
+- **Issues**: [GitHub Issues](https://github.com/dreamxwork/mditor-vs/issues)
+- **Email**: dreamxwork@outlook.com
 
 ---
 
-*Last updated: 2024*
+Made with ❤️ by the Mditor Team | *Last updated: 2026*

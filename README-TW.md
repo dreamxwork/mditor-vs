@@ -1,32 +1,95 @@
 # Mditor
 
-## 介紹
+[English](README.md) | [简体中文](README-CN.md) | [繁體中文](README-TW.md) | [日本語](README-JA.md)
 
-English | [简体中文](README-CN.md) | [繁體中文](README-TW.md)
+一款強大而優雅的 VS Code 擴充功能，透過所見即所得的編輯能力和全面的檔案預覽支援，徹底改變您的 Markdown 編輯體驗。
 
-Mditor是一個功能強大的Visual Studio Code擴展，提供全面的文件預覽功能和所見即所得的Markdown編輯器。此擴展支持在VS Code中預覽各種常見的辦公文件格式。
+## ✨ 特色亮點
 
-## 支援的文件格式
+Mditor 為 Visual Studio Code 帶來專業級的編輯和預覽功能：
 
-本擴展支援在VS Code中預覽以下常見的富文件格式：
+- 🎨 **精美的所見即所得 Markdown 編輯器** - 即時預覽，豐富格式
+- 📊 **多格式檔案檢視器** - 預覽 Office 文件、PDF 等
+- 🌓 **多主題支援** - 華麗的明暗主題，舒適編輯
+- ⚡ **閃電般快速** - 為大型文件最佳化的效能
+- 🎯 **開發者友善** - 豐富的鍵盤快速鍵和直覺介面
 
-- **Excel**: .xls, .xlsx, .csv
-- **Word**: .docx
-- **SVG**: .svg
-- **PDF**: .pdf
-- **字體**: .ttf, .otf, .woff, .woff2
-- **Markdown**: .md, .markdown
-- **HTTP請求**: .http, .rest
-- **Windows登錄檔**: .reg
-- **壓縮文件**: .zip, .jar, .vsix, .rar
+## 📸 截圖展示
 
-## 功能特性
+### 淺色主題
+![淺色主題](images/light.png)
 
-### Markdown編輯器
+### 深色主題
+![深色主題](images/dark.png)
 
-本擴展整合[Vditor](https://github.com/Vanessa219/vditor)實現對Markdown的所見即所得編輯。
+## 🚀 功能特性
 
-如果你需要使用原生的VS Code Markdown編輯器，在你的`settings.json`中新增以下配置：
+### 卓越的 Markdown 編輯器
+
+基於 [Vditor](https://github.com/Vanessa219/vditor) 建構，我們的所見即所得編輯器提供：
+
+- **即時預覽** - 輸入即可看到格式化內容
+- **豐富格式** - 支援表格、程式碼區塊、圖表（Mermaid）、數學公式（LaTeX）
+- **智慧貼上** - 自動圖片上傳和路徑解析
+- **隨處匯出** - 一鍵轉換為 PDF、DOCX 或 HTML
+- **主題多樣** - 多種精美編輯器主題，符合您的風格
+
+#### 強大的快速鍵
+
+基於 [Vditor 快速鍵](shortcut.md)，並增強了生產力功能：
+
+- **清單上移**: `Ctrl+Alt+I` / `⌘+^+I`
+- **清單下移**: `Ctrl+Alt+J` / `⌘+^+J`
+- **在 VS Code 中編輯**: `Ctrl+Alt+E` / `⌘+^+E`
+- **增強貼上**: `Ctrl+V` / `Cmd+V` 自動處理圖片
+
+#### 智慧功能
+
+- 使用 `Ctrl/Cmd + 滑鼠滾輪` 縮放編輯器
+- 使用 `Ctrl/Meta + 點擊` 或雙擊開啟超連結
+- 拖放插入圖片
+- 自動圖片路徑解析
+- 多主題選項的語法醒目提示
+
+### 全面的檔案預覽
+
+直接在 VS Code 中預覽常見檔案格式：
+
+- 📊 **試算表**: .xls, .xlsx, .csv（支援編輯和儲存）
+- 📝 **文件**: .docx
+- 🖼️ **圖形**: .svg
+- 📄 **PDF**: .pdf（由 PDF.js 驅動）
+- 🔤 **字型**: .ttf, .otf, .woff, .woff2
+- 📋 **Markdown**: .md, .markdown
+- 🌐 **HTTP**: .http, .rest（整合 HTTP 用戶端）
+- ⚙️ **登錄檔**: .reg（Windows 登錄檔檔案）
+- 📦 **壓縮檔**: .zip, .jar, .vsix, .rar
+
+### 其他功能
+
+- **Material 圖示** - 來自 Material Icon Theme 的精美檔案圖示
+- **HTML 即時預覽** - 按 `Ctrl+Shift+V` 即時預覽 HTML
+- **HTTP 用戶端** - 直接從 .http 檔案傳送 API 請求
+- **登錄檔編輯器** - Windows 登錄檔檔案的語法醒目提示
+
+## 🔧 設定選項
+
+透過 VS Code 設定微調 Mditor：
+
+| 設定項 | 說明 |
+|--------|------|
+| `mditor.enabled` | 啟用/停用擴充功能 |
+| `mditor.previewCode` | 在預覽中啟用程式碼語法醒目提示 |
+| `mditor.previewCodeStyle` | 預設語法醒目提示樣式 |
+| `mditor.previewCodeHighlight.showLineNumber` | 在程式碼區塊中顯示行號 |
+| `mditor.editorLanguage` | 編輯器介面語言 |
+| `mditor.workspacePathAsImageBasePath` | 使用工作區路徑作為圖片基礎路徑 |
+| `mditor.pasterImgPath` | 圖片貼上路徑範本 |
+| `mditor.chromiumPath` | PDF 匯出的 Chromium 路徑 |
+
+### 切換到原生 Markdown 編輯器
+
+要使用 VS Code 預設的 markdown 編輯器，在 `settings.json` 中新增：
 
 ```json
 {
@@ -37,118 +100,83 @@ Mditor是一個功能強大的Visual Studio Code擴展，提供全面的文件�
 }
 ```
 
-#### 匯出選項
+## 📋 系統需求
 
-在Markdown編輯器中右鍵可以將文件匯出為PDF、DOCX或HTML格式。PDF匯出依賴Chromium，可透過`mditor.chromiumPath`配置。
+- Visual Studio Code `^1.64.0`
+- 網路連線（某些預覽功能需要）
 
-![匯出選項](image/README-CN/1685418034035.png)
+## 📥 安裝方法
 
-#### 快速鍵
+### 從市集安裝
+1. 開啟 VS Code
+2. 進入擴充功能（`Ctrl+Shift+X`）
+3. 搜尋「Mditor」
+4. 點擊安裝
 
-基於[Vditor快速鍵](shortcut.md)以及更多功能：
+### 從 VSIX 安裝
+1. 下載最新的 .vsix 檔案
+2. 開啟 VS Code
+3. 擴充功能 → `...` → 從 VSIX 安裝
+4. 選擇下載的檔案
 
-- **將清單上移一行**: `Ctrl Alt I` / `⌘ ^ I`
-- **將清單下移一行**: `Ctrl Alt J` / `⌘ ^ J`
-- **在VS Code中編輯**: `Ctrl Alt E` / `⌘ ^ E`
-- **貼上增強內容**: `Ctrl V` / `Cmd V`（在Markdown文件中）
+## 🎯 快速開始
 
-#### 使用提示
+1. **Markdown 編輯**: 開啟任何 `.md` 檔案 - 所見即所得編輯器自動啟動
+2. **Office 預覽**: 點擊 `.xlsx`、`.docx`、`.pdf` 檔案進行預覽
+3. **HTML 預覽**: 開啟 `.html` 檔案並按 `Ctrl+Shift+V`
+4. **HTTP 請求**: 建立 `.http` 檔案測試 API
+5. **壓縮檔檢視**: 開啟 `.zip` 或其他壓縮檔瀏覽內容
 
-- 透過ctrl/cmd + 滑鼠滾輪調整編輯器大小
-- 超連結可以透過ctrl/meta + 點擊或雙擊開啟
-- 圖片貼上和自動路徑解析
-- 多主題支援的語法高亮
-
-### 其他功能
-
-- **圖示主題**: 內建Material Icon Theme圖示
-- **Excel預覽**: 支援.xlsx和.csv文件的預覽和儲存功能（注意：.xlsx儲存可能會遺失格式，.csv不支援GBK中文編碼）
-- **HTML即時預覽**: 編輯HTML時按`Ctrl Shift V`開啟即時預覽
-- **PDF預覽**: 直接預覽PDF文件
-- **HTTP客戶端**: 發送HTTP請求（由於REST Client本地請求有bug，進行了修改整合）
-- **登錄檔編輯器**: 支援Windows登錄檔文件
-- **壓縮文件檢視器**: 提取並檢視各種壓縮格式的內容
-
-## 設定選項
-
-擴展在VS Code設定中提供各種配置選項：
-
-- `mditor.enabled`: 啟用/停用擴展
-- `mditor.previewCode`: 在預覽中啟用程式碼語法高亮
-- `mditor.previewCodeStyle`: 預設語法高亮樣式
-- `mditor.previewCodeHighlight.showLineNumber`: 在程式碼區塊中顯示行號
-- `mditor.editorLanguage`: 編輯器語言偏好
-- `mditor.workspacePathAsImageBasePath`: 使用工作區路徑作為Markdown圖片基礎路徑
-- `mditor.pasterImgPath`: 圖片貼上路徑範本
-- `mditor.chromiumPath`: PDF匯出的Chromium瀏覽器路徑
-
-## 系統需求
-
-- Visual Studio Code ^1.64.0
-- 某些功能需要網路連線（PDF渲染，字體預覽）
-
-## 安裝方法
-
-1. 從VS Code市集安裝：搜尋"Mditor"
-2. 或透過VSIX安裝：下載並安裝.vsix文件
-3. 安裝後重新載入VS Code
-
-## 使用方法
-
-1. **Markdown**: 開啟任何.md文件開始使用所見即所得編輯器編輯
-2. **辦公文件**: 開啟.xlsx、.docx、.pdf文件進行預覽
-3. **HTML**: 開啟.html文件並按`Ctrl Shift V`進行即時預覽
-4. **HTTP請求**: 建立.http文件發送API請求
-5. **登錄檔文件**: 開啟.reg文件獲得語法高亮和導航功能
-
-## 開發
+## 🛠️ 開發
 
 ```bash
-# 安裝依賴
+# 安裝相依套件
 npm install
 
-# 建置擴展
+# 建置擴充功能
 npm run build
 
-# 開發模式執行
+# 開發模式（熱重載）
 npm run dev
 
 # 封裝發布
 npm run package
 ```
 
-## 贊助支援
+## 💖 支援本專案
 
-如果你願意支援本項目的開發，可以透過下面的二維碼進行捐助（支付寶 / 微信）：
+如果您覺得 Mditor 有幫助，請考慮支援其開發：
 
 <p>
-  <img src="images/alipay.jpg" alt="Alipay 捐助" style="width:200px;display:inline-block;margin-right:16px;" />
-  <img src="images/wechatpay.jpg" alt="WeChat Pay 捐助" style="width:200px;display:inline-block;" />
+  <img src="images/alipay.jpg" alt="支付寶捐贈" width="200" style="display:inline-block;margin-right:16px;" />
+  <img src="images/wechatpay.jpg" alt="微信支付捐贈" width="200" style="display:inline-block;" />
 </p>
 
-掃描任一二維碼即可完成捐助。若無法顯示，請確保倉庫中存在`images/alipay.jpg`和`images/wechatpay.jpg`文件。
+您的捐贈有助於維護和改進本專案。感謝您的支援！
 
-## 致謝
+## 🙏 致謝
 
-- **PDF渲染**: [mozilla/pdf.js/](https://github.com/mozilla/pdf.js/)
-- **DOCX渲染**: [VolodymyrBaydalka/docxjs](https://github.com/VolodymyrBaydalka/docxjs)
-- **XLSX渲染**:
-  - [SheetJS/sheetjs](https://github.com/SheetJS/sheetjs): XLSX解析
-  - [myliang/x-spreadsheet](https://github.com/myliang/x-spreadsheet): XLSX渲染
-- **HTTP客戶端**: [Rest Client](https://github.com/Huachao/vscode-restclient)
-- **Markdown編輯器**: [Vanessa219/vditor](https://github.com/Vanessa219/vditor)
+本專案基於以下優秀開源專案建構：
+
+- **PDF 渲染**: [mozilla/pdf.js](https://github.com/mozilla/pdf.js/)
+- **DOCX 渲染**: [VolodymyrBaydalka/docxjs](https://github.com/VolodymyrBaydalka/docxjs)
+- **XLSX 處理**:
+  - [SheetJS/sheetjs](https://github.com/SheetJS/sheetjs) - Excel 解析
+  - [myliang/x-spreadsheet](https://github.com/myliang/x-spreadsheet) - 試算表介面
+- **HTTP 用戶端**: [Rest Client](https://github.com/Huachao/vscode-restclient)
+- **Markdown 引擎**: [Vanessa219/vditor](https://github.com/Vanessa219/vditor)
 - **圖示主題**: [PKief/vscode-material-icon-theme](https://github.com/PKief/vscode-material-icon-theme)
 
-## 授權條款
+## 📜 授權條款
 
-本專案採用[LGPL-3.0-or-later授權條款](LICENSE)。
+本專案採用 [LGPL-3.0-or-later 授權條款](LICENSE)。
 
-## 問題回饋和支援
+## 📞 聯絡與支援
 
-- **錯誤報告**: [GitHub Issues](https://github.com/dreamxwork/mditor-vs/issues)
-- **郵件支援**: dreamxwork@outlook.com
-- **專案倉庫**: [GitHub Repository](https://github.com/dreamxwork/mditor-vs.git)
+- **專案倉庫**: [https://github.com/dreamxwork/mditor-vs](https://github.com/dreamxwork/mditor-vs)
+- **問題回饋**: [GitHub Issues](https://github.com/dreamxwork/mditor-vs/issues)
+- **電子郵件**: dreamxwork@outlook.com
 
 ---
 
-*最後更新: 2024年*
+用 ❤️ 製作，來自 Mditor 團隊 | *最後更新：2026 年*
