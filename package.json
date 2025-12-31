@@ -2,7 +2,7 @@
     "name": "mditor",
     "displayName": "Mditor",
     "description": "WYSIWYG Markdown Editor, View word,excel files.",
-    "version": "1.0.0",
+    "version": "2.5.2",
     "license": "LGPL-3.0-or-later",
     "publisher": "dreamxwork",
     "icon": "images/logo.png",
@@ -477,11 +477,18 @@
     },
     "scripts": {
         "dev": "vite --mode=development",
+        "dev:vditor": "bash dev-vditor.sh",
         "lint:fix": "eslint src/**/*.ts --fix",
         "build": "rm -rf out && vite build --mode=production",
+        "build:full": "bash build.sh --build",
+        "build:package": "bash build.sh --package",
+        "build:install": "bash build.sh --install",
+        "clean": "bash build.sh --clean",
         "package": "vsce package --no-dependencies",
         "publish": "vsce publish --no-dependencies",
-        "vscode:prepublish": "yarn run build"
+        "vscode:prepublish": "yarn run build",
+        "link:vditor": "bash link-local-vditor.sh",
+        "unlink:vditor": "bash unlink-local-vditor.sh"
     },
     "devDependencies": {
         "@types/node": "^22.10.0",
