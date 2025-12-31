@@ -24,7 +24,7 @@ Mditor是一个功能强大的Visual Studio Code扩展，提供全面的文件�
 
 ### Markdown编辑器
 
-本扩展集成[Vditor](https://github.com/Vanessa219/vditor)实现对Markdown的所见即所得编辑。**注意这个编辑器不再积极维护。**
+本扩展集成[Vditor](https://github.com/Vanessa219/vditor)实现对Markdown的所见即所得编辑。
 
 如果你需要使用原生的VS Code Markdown编辑器，在你的`settings.json`中添加以下配置：
 

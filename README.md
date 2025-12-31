@@ -24,7 +24,7 @@ This extension supports previewing these common rich file formats in VS Code:
 
 ### Markdown Editor
 
-This extension integrates [Vditor](https://github.com/Vanessa219/vditor) to provide WYSIWYG markdown editing. **Please note that this editor is no longer actively maintained.**
+This extension integrates [Vditor](https://github.com/Vanessa219/vditor) to provide WYSIWYG markdown editing.
 
 If you want to use the original VS Code markdown editor, add this to your `settings.json`:
 
