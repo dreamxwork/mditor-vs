@@ -147,10 +147,23 @@ npm run package
 
 Mditor が役に立つと思われた場合は、開発をサポートしてください：
 
+### 国際寄付
+[![PayPal](https://img.shields.io/badge/PayPal-Donate-blue.svg?logo=paypal)](https://www.paypal.me/howpigcanfly)
+
+**PayPal アカウント**: howpigcanfly@outlook.com
+
+### 中国本土での寄付
 <p>
   <img src="images/alipay.jpg" alt="Alipay 寄付" width="200" style="display:inline-block;margin-right:16px;" />
   <img src="images/wechatpay.jpg" alt="WeChat Pay 寄付" width="200" style="display:inline-block;" />
 </p>
+
+**Alipay / WeChat Pay**: 上記の QR コードをスキャン
+
+### 銀行振込
+銀行振込での寄付については、こちらまでご連絡ください：dreamxwork@outlook.com
+
+---
 
 ご寄付はこのプロジェクトの維持と改善に役立ちます。ご支援ありがとうございます！
 

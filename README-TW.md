@@ -147,10 +147,23 @@ npm run package
 
 如果您覺得 Mditor 有幫助，請考慮支援其開發：
 
+### 國際捐贈
+[![PayPal](https://img.shields.io/badge/PayPal-Donate-blue.svg?logo=paypal)](https://www.paypal.me/howpigcanfly)
+
+**PayPal 帳號**: howpigcanfly@outlook.com
+
+### 中國大陸捐贈
 <p>
   <img src="images/alipay.jpg" alt="支付寶捐贈" width="200" style="display:inline-block;margin-right:16px;" />
   <img src="images/wechatpay.jpg" alt="微信支付捐贈" width="200" style="display:inline-block;" />
 </p>
+
+**支付寶 / 微信支付**: 掃描上方二維碼
+
+### 銀行轉帳
+如需銀行轉帳捐贈，請聯絡：dreamxwork@outlook.com
+
+---
 
 您的捐贈有助於維護和改進本專案。感謝您的支援！
 
