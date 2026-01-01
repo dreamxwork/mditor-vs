@@ -22,7 +22,7 @@
 *斜体文本*
 ***粗斜体文本***
 ~~删除线文本~~
-`<u>`下划线文本`</u>`
+`<u>`下划线文本 `</u>`
 
 ### 引用块
 
@@ -182,11 +182,41 @@ target_include_directories(my_app PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 ### Log 文件示例
 
 ```log
-2024-01-15 10:30:25 INFO  [main] Application started successfully
-2024-01-15 10:30:26 DEBUG [worker-1] Processing request ID: 12345
-2024-01-15 10:30:27 WARN  [worker-2] Slow query detected: 2.5s
-2024-01-15 10:30:28 ERROR [worker-3] Database connection failed
-2024-01-15 10:30:29 INFO  [main] Shutting down application
+Dec 31 15:53:59 syncwork drkonqi-coredump-launcher[346668]: Nothing handled the dump :O
+Dec 31 15:53:59 syncwork drkonqi-coredump-launcher[346668]: Unable to find file for pid 346653 expected at "kcrash-metadata/corplink-security.1cfa4b1401a34cd0be7511b26c2fa9a7.346653.i>
+Dec 31 15:53:59 syncwork systemd[3349]: Started drkonqi-coredump-launcher@5527-346661-0.service - Launch DrKonqi for a systemd-coredump crash (PID 346661/UID 0).
+Dec 31 15:53:59 syncwork systemd-coredump[346660]: [LNK] Process 346653 (corplink-securi) of user 1000 dumped core.
+   
+                                                   Module libsystemd.so.0 from deb systemd-257.9-1~deb13u1.amd64
+                                                   Module libblkid.so.1 from deb util-linux-2.41-5.amd64
+                                                   Module libmount.so.1 from deb util-linux-2.41-5.amd64
+                                                   Module libatomic.so.1 from deb gcc-14-14.2.0-19.amd64
+                                                   Stack trace of thread 346653:
+                                                   #0  0x00007fdf0c193a77 g_log_structured_array (libglib-2.0.so.0 + 0x66a77)
+                                                   #1  0x00007fdf0c193ec9 g_log_default_handler (libglib-2.0.so.0 + 0x66ec9)
+                                                   #2  0x00007fdf0c19412b g_logv (libglib-2.0.so.0 + 0x6712b)
+                                                   #3  0x00007fdf0c194483 g_log (libglib-2.0.so.0 + 0x67483)
+
+                                                   Stack trace of thread 346656:
+                                                   #0  0x00007fdf0b2279ee n/a (libc.so.6 + 0x9a9ee)
+                                                   #1  0x00007fdf0b21c668 n/a (libc.so.6 + 0x8f668)
+                                                   #2  0x00007fdf0b21c6ad n/a (libc.so.6 + 0x8f6ad)
+                                                   #3  0x00007fdf0b290e6e ppoll (libc.so.6 + 0x103e6e)
+                                                   #4  0x00007fdf0c18b68c n/a (libglib-2.0.so.0 + 0x5e68c)
+ 
+```
+
+```
+[   14.882236] audit: type=1400 audit(1767108607.677:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name=4D6F6E676F444220436F6D70617373 pid=835 comm="apparmor_parser"
+[   14.882242] audit: type=1400 audit(1767108607.677:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="chrome" pid=845 comm="apparmor_parser"
+[   14.882248] audit: type=1400 audit(1767108607.677:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="cam" pid=842 comm="apparmor_parser"
+[   14.972378] intel_rapl_common: Found RAPL domain package
+[   14.972388] intel_rapl_common: Found RAPL domain core
+[   15.473015] NET: Registered PF_QIPCRTR protocol family
+[   20.477226] rfkill: input handler disabled
+[   21.180310] wlp1s0: authenticate with 48:5f:08:03:b5:3c (local address=1c:bf:c0:ee:2e:af)
+[   21.572405] wlp1s0: Limiting TX power to 35 (35 - 0) dBm as advertised by 48:5f:08:03:b5:3c
+[   22.620123] evm: overlay not supported
 ```
 
 ### Python 代码
@@ -222,6 +252,7 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
 ```
 
 ## 3. Mermaid 图表
@@ -232,14 +263,40 @@ if __name__ == "__main__":
 gitGraph
    commit id: "初始提交"
    commit id: "功能A"
-   branch feature-branch
-   checkout feature-branch
-   commit id: "开发功能B"
-   commit id: "修复bug"
+   branch develop
+   checkout develop
+   commit id: "开发环境初始化"
+   branch feature-auth
+   checkout feature-auth
+   commit id: "添加登录功能"
+   commit id: "添加注册功能"
+   checkout develop
+   merge feature-auth id: "合并认证功能"
+   branch feature-payment
+   checkout feature-payment
+   commit id: "集成支付API"
    checkout main
-   commit id: "功能C"
-   merge feature-branch id: "合并功能B"
-   commit id: "发布v1.0"
+   branch hotfix-security
+   checkout hotfix-security
+   commit id: "修复安全漏洞"
+   checkout main
+   merge hotfix-security id: "紧急修复v1.0.1"
+   checkout develop
+   merge hotfix-security
+   checkout feature-payment
+   commit id: "完成支付流程"
+   checkout develop
+   merge feature-payment id: "合并支付功能"
+   branch release-v2.0
+   checkout release-v2.0
+   commit id: "准备发布v2.0"
+   checkout main
+   merge release-v2.0 id: "发布v2.0"
+   checkout develop
+   merge release-v2.0
+   branch feature-analytics
+   checkout feature-analytics
+   commit id: "添加数据分析"
 ```
 
 ### 流程图
@@ -253,6 +310,104 @@ flowchart TD
     D --> F[结果2]
     E --> G[结束]
     F --> G
+```
+
+### 复杂流程图 - Linux 网络通讯架构
+
+```mermaid
+flowchart TD
+    subgraph UserSpace["用户空间 User Space"]
+        App1[应用程序<br/>Web Browser]
+        App2[应用程序<br/>SSH Client]
+        App3[应用程序<br/>File Transfer]
+
+        Socket[Socket API<br/>系统调用接口]
+    end
+
+    subgraph KernelSpace["内核空间 Kernel Space"]
+        subgraph TransportLayer["传输层 Transport Layer"]
+            TCP[TCP<br/>面向连接]
+            UDP[UDP<br/>无连接]
+            SCTP[SCTP<br/>流控制]
+        end
+
+        subgraph NetworkLayer["网络层 Network Layer"]
+            IPv4[IPv4<br/>地址路由]
+            IPv6[IPv6<br/>下一代协议]
+            IPSec[IPSec<br/>安全协议]
+            ICMP[ICMP<br/>控制消息]
+        end
+
+        subgraph DataLinkLayer["数据链路层 Data Link Layer"]
+            Ethernet[Ethernet<br/>以太网驱动]
+            WiFi[WiFi 802.11<br/>无线网驱动]
+            Bluetooth[Bluetooth<br/>蓝牙协议栈]
+            PPP[PPP<br/>点对点协议]
+        end
+    end
+
+    subgraph Hardware["硬件层 Hardware Layer"]
+        NIC[网卡 NIC<br/>有线网络]
+        WNIC[无线网卡<br/>WiFi Adapter]
+        BTAdapter[蓝牙适配器<br/>BT Dongle]
+        Modem[调制解调器<br/>Modem]
+    end
+
+    subgraph PhysicalMedia["物理介质"]
+        Cable[网线<br/>Cat5e/Cat6]
+        Radio[无线电波<br/>2.4GHz/5GHz]
+        BTRadio[蓝牙信号<br/>2.4GHz]
+        Phone[电话线<br/>ADSL/Fiber]
+    end
+
+    App1 --> Socket
+    App2 --> Socket
+    App3 --> Socket
+
+    Socket --> TCP
+    Socket --> UDP
+    Socket --> SCTP
+
+    TCP --> IPv4
+    UDP --> IPv4
+    SCTP --> IPv4
+    TCP --> IPv6
+    UDP --> IPv6
+
+    IPv4 --> ICMP
+    IPv6 --> ICMP
+    IPv4 --> IPSec
+    IPv6 --> IPSec
+
+    IPv4 --> Ethernet
+    IPv4 --> WiFi
+    IPv4 --> Bluetooth
+    IPv4 --> PPP
+
+    IPv6 --> Ethernet
+    IPv6 --> WiFi
+    IPv6 --> Bluetooth
+
+    Ethernet --> NIC
+    WiFi --> WNIC
+    Bluetooth --> BTAdapter
+    PPP --> Modem
+
+    NIC --> Cable
+    WNIC --> Radio
+    BTAdapter --> BTRadio
+    Modem --> Phone
+
+    style UserSpace fill:#e3f2fd
+    style KernelSpace fill:#fff3e0
+    style Hardware fill:#f1f8e9
+    style PhysicalMedia fill:#fce4ec
+    style Socket fill:#bbdefb
+    style IPv4 fill:#ffe082
+    style IPv6 fill:#ffe082
+    style Ethernet fill:#c5e1a5
+    style WiFi fill:#c5e1a5
+    style Bluetooth fill:#c5e1a5
 ```
 
 ### 序列图
@@ -343,19 +498,32 @@ pie title 编程语言使用分布
 
 ### 象限图
 
+技术评估矩阵
+
 ```mermaid
 quadrantChart
-    title Technology Assessment Matrix
+    title Frontend Tech Stack Assessment 2025
     x-axis Low Complexity --> High Complexity
     y-axis Low Value --> High Value
-    quadrant-1 Adopt
-    quadrant-2 Invest
-    quadrant-3 Re-evaluate
-    quadrant-4 Phase Out
-    React: [0.7, 0.8]
-    Vue: [0.6, 0.7]
-    Angular: [0.8, 0.6]
-    jQuery: [0.3, 0.4]
+    quadrant-1 Strategic Investment
+    quadrant-2 Priority Adoption
+    quadrant-3 Phase Out
+    quadrant-4 Avoid
+    React: [0.75, 0.85]
+    Vue3: [0.60, 0.80]
+    Svelte: [0.50, 0.75]
+    Solid.js: [0.55, 0.70]
+    Next.js: [0.80, 0.90]
+    Nuxt: [0.70, 0.85]
+    Astro: [0.45, 0.78]
+    TypeScript: [0.65, 0.95]
+    Vite: [0.40, 0.88]
+    Tailwind CSS: [0.35, 0.82]
+    Angular: [0.85, 0.60]
+    Backbone: [0.70, 0.25]
+    jQuery: [0.30, 0.20]
+    Grunt: [0.55, 0.15]
+    Bower: [0.40, 0.10]
 ```
 
 ### XY-Axis图表
@@ -450,14 +618,21 @@ $$
 ### 简单旋律
 
 ```abc
-X:1
-T:小星星
-M:4/4
-L:1/4
-K:C
-| C C G G | A A G2 | F F E E | D D C2 |
-| G G F F | E E D2 | G G F F | E E D2 |
-| C C G G | A A G2 | F F E E | D D C2 |
+X: 24
+T: Clouds Thicken
+C: Paul Rosen
+S: Copyright 2005
+M: 6/8
+L: 1/8
+Q: 3/8=116
+R: James Lee
+K: Em
+|:"Em"EEE E2G|"C7"_B2A G2F|"Em"EEE E2G|\
+"C7"_B2A "B7"=B3|"Em"EEE E2G|
+"C7"_B2A G2F|"Em"GFE "D (Bm7)"F2D|\
+1"Em"E3-E3:|2"Em"E3-E2B|:"Em"e2e gfe|
+"G"g2ab3|"Em"gfeg2e|"D"fedB2A|"Em"e2e gfe|\
+"G"g2ab3|"Em"gfe"D"f2d|"Em"e3-e3:|
 ```
 
 ### 和弦进行
@@ -477,12 +652,196 @@ K:C
 
 ## 7. 其他格式
 
+### 脑图
+
+```mindmap
+- 教程
+- 语法指导
+  - 普通内容
+  - 提及用户
+  - 表情符号 Emoji
+    - 一些表情例子
+  - 大标题 - Heading 3
+    - Heading 4
+      - Heading 5
+        - Heading 6
+  - 图片
+  - 代码块
+    - 普通
+    - 语法高亮支持
+      - 演示 Go 代码高亮
+      - 演示 Java 高亮
+  - 有序、无序、任务列表
+    - 无序列表
+    - 有序列表
+    - 任务列表
+  - 表格
+  - 隐藏细节
+  - 段落
+  - 链接引用
+  - 数学公式
+  - 脑图
+  - 流程图
+  - 时序图
+  - 甘特图
+  - 图表
+  - 五线谱
+  - Graphviz
+  - 多媒体
+  - 脚注
+- 快捷键
+
+```
+
+### Graphviz
+
+```graphviz
+digraph G {
+    node [shape=record, style=filled, fillcolor=lightcyan];
+    struct1 [label="<f0> left|<f1> mid|<f2> right"];
+    struct2 [label="<f0> one|<f1> two"];
+    struct3 [label="hello\nworld |{ b |{c|<here> d|e}| f}| g | h", fillcolor=lightgreen];
+    struct1:f1 -> struct2:f0;
+    struct1:f2 -> struct3:here;
+}
+
+```
+
+```graphviz
+digraph DataFlow {
+    rankdir=LR;
+    node [shape=box, style=rounded];
+
+    start [label="开始", shape=ellipse, style=filled, fillcolor=lightyellow];
+    input [label="数据输入", style=filled, fillcolor=lightblue];
+    validate [label="数据验证", style=filled, fillcolor=lightcyan];
+    process [label="数据处理", style=filled, fillcolor=lightgreen];
+    save [label="保存结果", style=filled, fillcolor=lightpink];
+    end [label="结束", shape=ellipse, style=filled, fillcolor=lightgray];
+    error [label="错误处理", style=filled, fillcolor=lightsalmon];
+
+    start -> input;
+    input -> validate;
+    validate -> process [label="验证通过"];
+    validate -> error [label="验证失败", color=red, style=dashed];
+    process -> save;
+    save -> end;
+    error -> end;
+}
+
+```
+
+```graphviz
+digraph finite_state_machine {
+    rankdir=LR;
+    size="8,5"
+    node [shape = doublecircle]; S;
+    node [shape = point ]; qi
+
+    node [shape = circle];
+    qi -> S;
+    S  -> q1 [ label = "a" ];
+    S  -> S  [ label = "a" ];
+    q1 -> S  [ label = "a" ];
+    q1 -> q2 [ label = "ddb" ];
+    q2 -> q1 [ label = "b" ];
+    q2 -> q2 [ label = "b" ];
+}
+```
+
+### echarts
+
+```echarts
+{
+  "title": { "text": "月度销售数据" },
+  "tooltip": { "trigger": "axis" },
+  "legend": { "data": ["销售额", "利润"] },
+  "xAxis": {
+    "type": "category",
+    "data": ["1月", "2月", "3月", "4月", "5月", "6月"]
+  },
+  "yAxis": { "type": "value" },
+  "series": [
+    {
+      "name": "销售额",
+      "type": "bar",
+      "data": [120, 200, 150, 80, 70, 110],
+      "itemStyle": { "color": "#5470c6" }
+    },
+    {
+      "name": "利润",
+      "type": "bar",
+      "data": [60, 100, 75, 40, 35, 55],
+      "itemStyle": { "color": "#91cc75" }
+    }
+  ]
+}
+
+```
+
+```echarts
+{
+  "title": { "text": "最近 30 天" },
+  "tooltip": { "trigger": "axis", "axisPointer": { "lineStyle": { "width": 0 } } },
+  "legend": { "data": ["帖子", "用户", "回帖"] },
+  "xAxis": [{
+      "type": "category",
+      "boundaryGap": false,
+      "data": ["2019-05-08","2019-05-09","2019-05-10","2019-05-11","2019-05-12","2019-05-13","2019-05-14","2019-05-15","2019-05-16","2019-05-17","2019-05-18","2019-05-19","2019-05-20","2019-05-21","2019-05-22","2019-05-23","2019-05-24","2019-05-25","2019-05-26","2019-05-27","2019-05-28","2019-05-29","2019-05-30","2019-05-31","2019-06-01","2019-06-02","2019-06-03","2019-06-04","2019-06-05","2019-06-06","2019-06-07"],
+      "axisTick": { "show": false },
+      "axisLine": { "show": false }
+  }],
+  "yAxis": [{ "type": "value", "axisTick": { "show": false }, "axisLine": { "show": false }, "splitLine": { "lineStyle": { "color": "rgba(0, 0, 0, .38)", "type": "dashed" } } }],
+  "series": [
+    {
+      "name": "帖子", "type": "line", "smooth": true, "itemStyle": { "color": "#d23f31" }, "areaStyle": { "normal": {} }, "z": 3,
+      "data": ["18","14","22","9","7","18","10","12","13","16","6","9","15","15","12","15","8","14","9","10","29","22","14","22","9","10","15","9","9","15","0"]
+    },
+    {
+      "name": "用户", "type": "line", "smooth": true, "itemStyle": { "color": "#f1e05a" }, "areaStyle": { "normal": {} }, "z": 2,
+      "data": ["31","33","30","23","16","29","23","37","41","29","16","13","39","23","38","136","89","35","22","50","57","47","36","59","14","23","46","44","51","43","0"]
+    },
+    {
+      "name": "回帖", "type": "line", "smooth": true, "itemStyle": { "color": "#4285f4" }, "areaStyle": { "normal": {} }, "z": 1,
+      "data": ["35","42","73","15","43","58","55","35","46","87","36","15","44","76","130","73","50","20","21","54","48","73","60","89","26","27","70","63","55","37","0"]
+    }
+  ]
+}
+
+```
+
+### Flowchart
+
+```flowchart
+st=>start: 开始
+input=>inputoutput: 输入数据
+process1=>operation: 数据处理
+process2=>operation: 数据验证
+cond1=>condition: 是否合法?
+cond2=>condition: 需要审批?
+approve=>operation: 提交审批
+save=>operation: 保存数据
+error=>inputoutput: 错误提示
+e=>end: 结束
+
+st->input->process1->process2->cond1
+cond1(yes)->cond2
+cond1(no)->error->e
+cond2(yes)->approve->save->e
+cond2(no)->save->e
+
+```
+
+### 多媒体
+
+支持 v.qq.com，youtube.com，youku.com，coub.com，facebook.com/video，dailymotion.com，.mp4，.m4v，.ogg，.ogv，.webm，.mp3，.wav 链接解析
+
+https://v.qq.com/x/cover/zf2z0xpqcculhcz/y0016tj0qvh.html
+
 ### 脚注
 
 这是一个带有脚注的句子[^1]。
 
-[^1]: 这是脚注的内容。
-    
 ### 定义列表
 
 术语1
@@ -502,7 +861,7 @@ H~2~O 是水的化学式，E=mc^2^ 是质能方程。
 
 ### 键盘快捷键
 
-按 `<kbd>`Ctrl`</kbd>` + `<kbd>`C`</kbd>` 复制，按 `<kbd>`Ctrl`</kbd>` + `<kbd>`V`</kbd>` 粘贴。
+按 `<kbd>`Ctrl `</kbd>` + `<kbd>`C `</kbd>` 复制，按 `<kbd>`Ctrl `</kbd>` + `<kbd>`V `</kbd>` 粘贴。
 
 ## 8. 链接和图片
 
@@ -559,3 +918,5 @@ print("折叠区域内的代码")
 ---
 
 *本文档展示了Markdown的各种格式和功能，可以作为学习和参考使用。*
+
+[^1]: 这是脚注的内容。
