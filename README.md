@@ -127,6 +127,23 @@ To use VS Code's default markdown editor, add to `settings.json`:
 4. **HTTP Requests**: Create `.http` files to test APIs
 5. **Archive Viewing**: Open `.zip` or other archives to browse contents
 
+## 📖 Markdown Examples
+
+Want to see what Mditor can do? Check out our comprehensive Markdown examples file that showcases all supported features:
+
+**[Download markdown-examples.md](https://raw.githubusercontent.com/dreamxwork/mditor-vs/main/markdown-examples.md)**
+
+This example file includes:
+- Basic text formatting (headings, bold, italic, lists)
+- Code blocks with syntax highlighting (C++, Java, Python, Shell, CMake, Log files)
+- Mermaid diagrams (flowcharts, sequence diagrams, class diagrams, Gantt charts, Git graphs)
+- Mathematical formulas (LaTeX)
+- Tables and data visualization
+- Music notation (ABC notation)
+- Graphviz diagrams
+- ECharts data visualization
+- And much more!
+
 ## 🛠️ Development
 
 ```bash

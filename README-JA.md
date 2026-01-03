@@ -127,6 +127,23 @@ VS Code のデフォルト markdown エディターを使用するには、`sett
 4. **HTTP リクエスト**: `.http` ファイルを作成して API をテスト
 5. **アーカイブ表示**: `.zip` やその他のアーカイブを開いて内容を閲覧
 
+## 📖 Markdown サンプル
+
+Mditor で何ができるか見てみたいですか？サポートされているすべての機能を紹介する包括的な Markdown サンプルファイルをご覧ください：
+
+**[markdown-examples.md をダウンロード](https://raw.githubusercontent.com/dreamxwork/mditor-vs/main/markdown-examples.md)**
+
+このサンプルファイルには以下が含まれます：
+- 基本的なテキストフォーマット（見出し、太字、斜体、リスト）
+- シンタックスハイライト付きコードブロック（C++、Java、Python、Shell、CMake、ログファイル）
+- Mermaid 図表（フローチャート、シーケンス図、クラス図、ガントチャート、Git ブランチ図）
+- 数式（LaTeX）
+- 表とデータ可視化
+- 楽譜記譜（ABC 記譜法）
+- Graphviz 図表
+- ECharts データ可視化
+- その他多数の機能！
+
 ## 🛠️ 開発
 
 ```bash

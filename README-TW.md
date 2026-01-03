@@ -127,6 +127,23 @@ Mditor 為 Visual Studio Code 帶來專業級的編輯和預覽功能：
 4. **HTTP 請求**: 建立 `.http` 檔案測試 API
 5. **壓縮檔檢視**: 開啟 `.zip` 或其他壓縮檔瀏覽內容
 
+## 📖 Markdown 範例
+
+想看看 Mditor 能做什麼？查看我們全面的 Markdown 範例檔案，展示所有支援的功能：
+
+**[下載 markdown-examples.md](https://raw.githubusercontent.com/dreamxwork/mditor-vs/main/markdown-examples.md)**
+
+此範例檔案包含：
+- 基礎文字格式（標題、粗體、斜體、清單）
+- 帶語法醒目提示的程式碼區塊（C++、Java、Python、Shell、CMake、日誌檔案）
+- Mermaid 圖表（流程圖、時序圖、類別圖、甘特圖、Git 分支圖）
+- 數學公式（LaTeX）
+- 表格和資料視覺化
+- 五線譜記譜（ABC 記譜法）
+- Graphviz 圖表
+- ECharts 資料視覺化
+- 以及更多功能！
+
 ## 🛠️ 開發
 
 ```bash
