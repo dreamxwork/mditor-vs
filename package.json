@@ -2,7 +2,7 @@
     "name": "mditor",
     "displayName": "Mditor",
     "description": "WYSIWYG Markdown Editor, View word,excel files.",
-    "version": "2.5.2",
+    "version": "3.0.1",
     "license": "LGPL-3.0-or-later",
     "publisher": "dreamxwork",
     "icon": "images/logo.png",
