@@ -1,6 +1,6 @@
 # Mditor
 
-[English](README.md) | [简体中文](README-CN.md) | [繁體中文](README-TW.md) | [日本語](README-JA.md)
+[English](README.md) | [简体中文](README-CN.md) | [繁體中文](README-TW.md) | [日本語](README-JA.md) | [한국어](README-KO.md) | [Français](README-FR.md) | [Deutsch](README-DE.md) | [Español](README-ES.md) | [Русский](README-RU.md)
 
 WYSIWYG 機能と包括的なファイルプレビューサポートにより、Markdown 編集体験を変革する強力でエレガントな VS Code 拡張機能です。
 

@@ -1,6 +1,6 @@
 # Mditor
 
-[English](README.md) | [简体中文](README-CN.md) | [繁體中文](README-TW.md) | [日本語](README-JA.md)
+[English](README.md) | [简体中文](README-CN.md) | [繁體中文](README-TW.md) | [日本語](README-JA.md) | [한국어](README-KO.md) | [Français](README-FR.md) | [Deutsch](README-DE.md) | [Español](README-ES.md) | [Русский](README-RU.md)
 
 一款强大而优雅的 VS Code 扩展，通过所见即所得的编辑能力和全面的文件预览支持，彻底改变您的 Markdown 编辑体验。
 

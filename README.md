@@ -1,6 +1,6 @@
 # Mditor
 
-[English](README.md) | [简体中文](README-CN.md) | [繁體中文](README-TW.md) | [日本語](README-JA.md)
+[English](README.md) | [简体中文](README-CN.md) | [繁體中文](README-TW.md) | [日本語](README-JA.md) | [한국어](README-KO.md) | [Français](README-FR.md) | [Deutsch](README-DE.md) | [Español](README-ES.md) | [Русский](README-RU.md)
 
 A powerful and elegant VS Code extension that transforms your Markdown editing experience with WYSIWYG capabilities and comprehensive file preview support.
 
