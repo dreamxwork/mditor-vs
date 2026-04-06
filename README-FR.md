@@ -169,6 +169,9 @@ Si vous trouvez Mditor utile, envisagez de soutenir son développement :
 
 **Compte PayPal** : howpigcanfly@outlook.com
 
+### Dons en cryptomonnaies
+**Bitcoin (BTC)** : `13KGRMK3AGMNxQqdC5yyNRi7cpmD3mQhAM`
+
 ### Dons en Chine continentale
 <p>
   <img src="images/alipay.jpg" alt="Don Alipay" width="200" style="display:inline-block;margin-right:16px;" />

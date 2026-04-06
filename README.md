@@ -169,6 +169,9 @@ If you find Mditor helpful, consider supporting its development:
 
 **PayPal**: howpigcanfly@outlook.com
 
+### Crypto Donations
+**Bitcoin (BTC)**: `13KGRMK3AGMNxQqdC5yyNRi7cpmD3mQhAM`
+
 ### China Mainland Donations
 <p>
   <img src="images/alipay.jpg" alt="Alipay Donation" width="200" style="display:inline-block;margin-right:16px;" />

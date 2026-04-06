@@ -169,6 +169,9 @@ Wenn Sie Mditor hilfreich finden, erwägen Sie, seine Entwicklung zu unterstütz
 
 **PayPal-Konto**: howpigcanfly@outlook.com
 
+### Krypto-Spenden
+**Bitcoin (BTC)**: `13KGRMK3AGMNxQqdC5yyNRi7cpmD3mQhAM`
+
 ### Spenden aus Festlandchina
 <p>
   <img src="images/alipay.jpg" alt="Alipay-Spende" width="200" style="display:inline-block;margin-right:16px;" />

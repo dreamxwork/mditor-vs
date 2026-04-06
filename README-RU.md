@@ -169,6 +169,9 @@ npm run package
 
 **Аккаунт PayPal**: howpigcanfly@outlook.com
 
+### Криптовалютные пожертвования
+**Bitcoin (BTC)**: `13KGRMK3AGMNxQqdC5yyNRi7cpmD3mQhAM`
+
 ### Пожертвования из материкового Китая
 <p>
   <img src="images/alipay.jpg" alt="Пожертвование Alipay" width="200" style="display:inline-block;margin-right:16px;" />

@@ -169,6 +169,9 @@ npm run package
 
 **PayPal 帳號**: howpigcanfly@outlook.com
 
+### 加密貨幣捐贈
+**比特幣 (BTC)**: `13KGRMK3AGMNxQqdC5yyNRi7cpmD3mQhAM`
+
 ### 中國大陸捐贈
 <p>
   <img src="images/alipay.jpg" alt="支付寶捐贈" width="200" style="display:inline-block;margin-right:16px;" />

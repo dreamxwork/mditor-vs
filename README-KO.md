@@ -169,6 +169,9 @@ Mditor가 도움이 되었다면 개발을 지원해 주세요:
 
 **PayPal 계정**: howpigcanfly@outlook.com
 
+### 암호화폐 기부
+**Bitcoin (BTC)**: `13KGRMK3AGMNxQqdC5yyNRi7cpmD3mQhAM`
+
 ### 중국 본토 기부
 <p>
   <img src="images/alipay.jpg" alt="Alipay 기부" width="200" style="display:inline-block;margin-right:16px;" />

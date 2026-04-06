@@ -169,6 +169,9 @@ Si encuentras útil Mditor, considera apoyar su desarrollo:
 
 **Cuenta PayPal**: howpigcanfly@outlook.com
 
+### Donaciones en criptomonedas
+**Bitcoin (BTC)**: `13KGRMK3AGMNxQqdC5yyNRi7cpmD3mQhAM`
+
 ### Donaciones en China continental
 <p>
   <img src="images/alipay.jpg" alt="Donación Alipay" width="200" style="display:inline-block;margin-right:16px;" />
